@@ -120,6 +120,7 @@ function reset() {
       e.innerHTML = "";
       e.style.backgroundColor = "black";
       e.id = "new";
+      gameOver = false;
     })
   );
 }
