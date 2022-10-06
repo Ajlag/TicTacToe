@@ -7,7 +7,7 @@
 body {
   background-color: black;
 }
-.header {
+#header {
   width: 20vw;
   height: 50px;
   margin: 20vh 39.5vw 0 39.5vw;
@@ -28,7 +28,6 @@ body {
   align-items: center;
   border: 2px solid blue;
   border-radius: 10px;
-
   margin: 0 37vw;
 }
 
@@ -40,13 +39,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: blue; */
   border: 1px solid blue;
   border-radius: 5px;
   text-shadow: 0 0 5px white, 0 0 7px white;
   color: white;
 }
 
+#footer {
+  width: 25vw;
+  height: 70px;
+  margin: 0 37vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-button {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  transition: background-color 1s ease-out 100ms;
+  transition: all 1s ease-in-out;
+}
+
+.game-button:hover {
+  background-color: blue;
+  box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+}
 #win {
   animation: blinking 1s infinite;
 }
@@ -56,9 +79,13 @@ body {
     width: 50vw;
     margin: 0 25vw;
   }
-  .header {
+  #header {
     margin: 20vh 30vw 0 30vw;
     width: 40vw;
+  }
+  #footer {
+    width: 50vw;
+    margin: 5px 25vw;
   }
 }
 

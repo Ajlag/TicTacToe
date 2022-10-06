@@ -9,7 +9,10 @@
 // Pamti score
 // restartuje score
 // pobednik je ko dodje do 5
+
 game = document.getElementById("container");
+footerDiv = document.getElementById("footer");
+headerDiv = document.getElementById("header");
 const gameMatrix = createTable();
 let nextMove = 0;
 let gameOver = false;
@@ -98,5 +101,59 @@ function chechWin() {
     gameOver = true;
     winSimbol = gameMatrix[0][2].innerText;
     return;
+  }
+}
+
+function createButton() {
+  const button = document.createElement("button");
+  button.innerHTML = "Restart";
+  button.className = "game-button";
+  button.addEventListener("click", reset);
+  footerDiv.appendChild(button);
+}
+
+restaruj = createButton();
+
+function reset() {
+  gameMatrix.map((arr) =>
+    arr.map((e) => {
+      e.innerHTML = "";
+      e.style.backgroundColor = "black";
+      e.id = "new";
+    })
+  );
+}
+
+function createPlayer() {
+  const player1Div = document.createElement("div");
+  player1Div.className = "player";
+  headerDiv.appendChild(player1Div);
+
+  const name = document.createElement("p");
+  name.innerText = "Player 1";
+  player1Div.appendChild(name);
+
+  const point = document.createElement("p");
+  point.innerText = player1;
+  player1Div.appendChild(point);
+
+  const player2Div = document.createElement("div");
+  player2Div.className = "player2";
+  headerDiv.appendChild(player2Div);
+
+  const name1 = document.createElement("p");
+  name1.innerText = "Player 2";
+  player2Div.appendChild(name1);
+
+  const point2 = document.createElement("p");
+  point2.innerText = player2;
+  player2Div.appendChild(point2);
+}
+
+createPlayer();
+whoGetsPoint();
+function whoGetsPoint() {
+  if (winSimbol !== "") {
+    return winSimbol === "X" ? player1++ : player2++;
   }
 }
