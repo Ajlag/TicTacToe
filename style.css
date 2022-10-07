@@ -5,12 +5,14 @@
 }
 
 body {
-  background-color: black;
+  background-image: url("https://t4.ftcdn.net/jpg/02/28/51/83/360_F_228518365_HNKIxi7GjLTKN3JtlB99NTZwFSGe7udE.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
 }
 #header {
   width: 20vw;
   height: 50px;
-  margin: 20vh 39.5vw 0 39.5vw;
+  margin: 100px 39.5vw 0 39.5vw;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -45,6 +47,10 @@ body {
   color: white;
 }
 
+.game-div:hover {
+  /* color: #255784; */
+  box-shadow: 0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 10px #2196f3;
+}
 #footer {
   width: 25vw;
   height: 70px;
@@ -89,7 +95,7 @@ body {
     margin: 0 25vw;
   }
   #header {
-    margin: 20vh 30vw 0 30vw;
+    margin: 100px 30vw 0 30vw;
     width: 40vw;
   }
   #footer {
@@ -107,7 +113,7 @@ body {
 @media only screen and (max-width: 540px) {
   #header {
     width: 55vw;
-    margin: 20vh 20vw 0 20vw;
+    margin: 100px 20vw 0 20vw;
   }
 }
 @keyframes blinking {
