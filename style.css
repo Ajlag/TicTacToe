@@ -78,7 +78,7 @@ body {
   width: 150px;
   padding: 5px;
   border-radius: 5px;
-  border: 2px solid blue;
+  border: 2px solid red;
   margin-bottom: 5px;
   animation: playTurn 1s infinite;
 }
@@ -130,7 +130,7 @@ body {
 
 @keyframes playTurn {
   0% {
-    color: blue;
+    color: red;
   }
   47% {
     color: white;

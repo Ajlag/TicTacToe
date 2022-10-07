@@ -44,6 +44,8 @@ function handleGameDiv(e) {
   }
 
   if (gameOver) {
+    player1Div.id = "none";
+    player2Div.id = "none";
     return;
   }
 
