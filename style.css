@@ -5,9 +5,7 @@
 }
 
 body {
-  background-image: url("https://t4.ftcdn.net/jpg/02/28/51/83/360_F_228518365_HNKIxi7GjLTKN3JtlB99NTZwFSGe7udE.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-color: black;
 }
 #header {
   width: 20vw;
