@@ -131,6 +131,7 @@ function createButton() {
 restaruj = createButton();
 
 function reset() {
+  nextMove = 0;
   player1Div.id = "playersTurn";
   player2Div.id = "none";
   gameMatrix.map((arr) =>
