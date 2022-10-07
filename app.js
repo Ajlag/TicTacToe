@@ -20,6 +20,11 @@ let winSimbol = "";
 let player1 = 0;
 let player2 = 0;
 
+const player1Div = document.createElement("div");
+const player2Div = document.createElement("div");
+
+player1Div.id = "playersTurn";
+
 function createTable() {
   return new Array(3).fill(Array(3).fill(null)).map((arr) =>
     arr.map(() => {
@@ -41,10 +46,19 @@ function handleGameDiv(e) {
   if (gameOver) {
     return;
   }
-  nextMove % 2 == 0 ? (e.target.innerText = "X") : (e.target.innerText = "O");
+
+  if (nextMove % 2 == 0) {
+    e.target.innerText = "X";
+    player1Div.id = "none";
+    player2Div.id = "playersTurn";
+  } else {
+    e.target.innerText = "O";
+    player2Div.id = "none";
+    player1Div.id = "playersTurn";
+  }
+
   e.target.style.backgroundColor = "blue";
   nextMove++;
-
   chechWin();
 }
 
@@ -115,6 +129,8 @@ function createButton() {
 restaruj = createButton();
 
 function reset() {
+  player1Div.id = "playersTurn";
+  player2Div.id = "none";
   gameMatrix.map((arr) =>
     arr.map((e) => {
       e.innerHTML = "";
@@ -124,26 +140,22 @@ function reset() {
     })
   );
 }
-
 function createPlayer() {
-  const player1Div = document.createElement("div");
   player1Div.className = "player";
   headerDiv.appendChild(player1Div);
 
   const name = document.createElement("p");
-  name.innerText = "Player 1";
+  name.innerText = "Player X";
   player1Div.appendChild(name);
 
   const point = document.createElement("p");
   point.innerText = player1;
   player1Div.appendChild(point);
-
-  const player2Div = document.createElement("div");
-  player2Div.className = "player2";
+  player2Div.className = "player";
   headerDiv.appendChild(player2Div);
 
   const name1 = document.createElement("p");
-  name1.innerText = "Player 2";
+  name1.innerText = "Player O";
   player2Div.appendChild(name1);
 
   const point2 = document.createElement("p");

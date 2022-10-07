@@ -74,6 +74,15 @@ body {
   animation: blinking 1s infinite;
 }
 
+#playersTurn {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid blue;
+  margin-bottom: 5px;
+  animation: playTurn 1s infinite;
+}
+
 @media only screen and (max-width: 800px) {
   #container {
     width: 50vw;
@@ -94,6 +103,13 @@ body {
     font-size: 20px;
   }
 }
+
+@media only screen and (max-width: 540px) {
+  #header {
+    width: 55vw;
+    margin: 20vh 20vw 0 20vw;
+  }
+}
 @keyframes blinking {
   0% {
     background-color: red;
@@ -109,5 +125,20 @@ body {
   }
   100% {
     color: #000;
+  }
+}
+
+@keyframes playTurn {
+  0% {
+    color: blue;
+  }
+  47% {
+    color: white;
+  }
+  75% {
+    color: transparent;
+  }
+  100% {
+    color: #fff;
   }
 }
