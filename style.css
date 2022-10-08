@@ -113,9 +113,17 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
+  #container {
+    width: 90vw;
+    margin: 0 5vw;
+  }
   #header {
-    width: 55vw;
-    margin: 100px 20vw 0 20vw;
+    width: 70vw;
+    margin: 100px 15vw 10px 15vw;
+  }
+  #footer {
+    width: 70vw;
+    margin: 10px 15vw 10px 15vw;
   }
 }
 @keyframes blinking {
