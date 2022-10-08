@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(24, 24, 24);
 }
 #header {
   width: 20vw;
@@ -17,6 +17,7 @@ body {
 }
 .player {
   text-align: center;
+  color: white;
 }
 #container {
   width: 25vw;
@@ -34,7 +35,6 @@ body {
 .game-div {
   width: 31%;
   height: 31%;
-  border: 1px solid black;
   font-size: 50px;
   display: flex;
   justify-content: center;
@@ -49,19 +49,23 @@ body {
   /* color: #255784; */
   box-shadow: 0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 10px #2196f3;
 }
+
+.game-div-clicked {
+  background-color: blue;
+}
 #footer {
   width: 25vw;
   height: 70px;
   margin: 0 37vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .game-button {
   width: 100px;
   height: 40px;
-  background-color: black;
+  background-color: rgb(24, 24, 24);
   color: white;
   font-size: 15px;
   border-radius: 5px;
@@ -119,7 +123,7 @@ body {
     background-color: red;
   }
   47% {
-    background-color: #000;
+    background-color: rgb(24, 24, 24);
   }
   62% {
     background-color: transparent;
